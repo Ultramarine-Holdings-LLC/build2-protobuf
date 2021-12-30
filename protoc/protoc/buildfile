@@ -1,0 +1,5 @@
+import libs = libprotoc%lib{protoc}
+
+cxx.poptions += "-I$src_base"
+
+exe{protoc}: cxx{google/protobuf/compiler/main} $libs

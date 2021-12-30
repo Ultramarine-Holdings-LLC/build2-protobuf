@@ -1,0 +1,9 @@
+: 1
+name: libprotoc
+version: 3.19.1-a.0.z
+summary: libprotoc C++ library
+license: BSD-3-Clause
+url: https://github.com/protocolbuffers/protobuf
+depends: * build2 >= 0.14.0
+depends: * bpkg >= 0.14.0
+depends: protobuf == $

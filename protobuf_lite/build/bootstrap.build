@@ -1,0 +1,7 @@
+project = protobuf_lite
+
+using version
+using config
+using test
+using install
+using dist

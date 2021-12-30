@@ -1,0 +1,6 @@
+$out_root/
+{
+  include protobuf_lite/
+}
+
+export $out_root/protobuf_lite/$import.target

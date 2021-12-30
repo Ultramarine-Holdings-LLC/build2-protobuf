@@ -1,0 +1,8 @@
+: 1
+location: protobuf_lite/
+:
+location: protobuf/
+:
+location: libprotoc/
+:
+location: protoc/

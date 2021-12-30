@@ -1,0 +1,8 @@
+: 1
+name: protobuf
+version: 3.19.1-a.0.z
+summary: protobuf C++ library
+license: BSD-3-Clause
+url: https://github.com/protocolbuffers/protobuf
+depends: * build2 >= 0.14.0
+depends: * bpkg >= 0.14.0

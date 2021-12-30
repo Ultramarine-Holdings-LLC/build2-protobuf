@@ -1,0 +1,6 @@
+$out_root/
+{
+  include protoc/
+}
+
+export $out_root/protoc/$import.target
