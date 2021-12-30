@@ -1,6 +1,6 @@
 : 1
 name: protoc
-version: 3.19.1-a.0.z
+version: 3.19.1
 summary: protoc executable
 license: BSD-3-Clause
 url: https://github.com/protocolbuffers/protobuf
