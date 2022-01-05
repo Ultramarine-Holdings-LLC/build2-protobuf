@@ -159,3 +159,6 @@ sources_protoc = \
 cxx.poptions += "-I$src_base"
 
 lib{protoc}: $sources_protoc $libs
+{
+    cxx.export.poptions += "-I$src_base"
+}
