@@ -1,5 +1,11 @@
 import libs = libprotoc%lib{protoc}
 
-cxx.poptions += "-I$src_base"
+cxx.poptions += "-DBUILD2_PROTOC_VERSION=\"$version\""
 
-exe{protoc}: cxx{google/protobuf/compiler/main} $libs
+exe{protoc}: cxx{main} $libs
+{
+    export.metadata = 1 protoc
+    protoc.name = [string] protoc
+    protoc.version = [string] $version
+    protoc.checksum = [string] $version
+}
