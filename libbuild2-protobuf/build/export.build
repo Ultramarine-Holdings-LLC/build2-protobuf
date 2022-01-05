@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libbuild2/protobuf/
+}
+
+export $out_root/libbuild2/protobuf/$import.target

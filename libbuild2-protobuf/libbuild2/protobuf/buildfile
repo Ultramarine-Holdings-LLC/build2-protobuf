@@ -1,0 +1,24 @@
+import libs  = build2%lib{build2}
+import libs += build2%lib{build2-cxx}
+
+lib{build2-protobuf}: {hxx cxx}{**} $libs
+
+cxx.poptions =+ "-I$src_root"
+
+lib{build2-protobuf}:
+{
+    cxx.export.poptions = "-I$src_root"
+}
+
+if $version.pre_release
+  lib{build2-protobuf}: bin.lib.version = "-$version.project_id"
+else
+  lib{build2-protobuf}: bin.lib.version = "-$version.major.$version.minor"
+
+libs{build2-protobuf}: bin.lib.load_suffix = "-$build.version.interface"
+
+hxx{*}:
+{
+  install         = include/libbuild2/protobuf/
+  install.subdirs = true
+}
