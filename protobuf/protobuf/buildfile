@@ -240,3 +240,6 @@ sources_full = \
 cxx.poptions += "-I$src_base"
 
 lib{protobuf}: $header $sources_lite $sources_full
+{
+    cxx.export.poptions += "-I$src_base"
+}

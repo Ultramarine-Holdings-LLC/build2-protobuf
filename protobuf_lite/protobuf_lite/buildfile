@@ -162,3 +162,6 @@ sources_lite = \
 cxx.poptions += "-I$src_base"
 
 lib{protobuf_lite}: $headers $sources_lite
+{
+    cxx.export.poptions += "-I$src_base"
+}
