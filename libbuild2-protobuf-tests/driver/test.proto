@@ -1,0 +1,7 @@
+syntax = "proto3";
+package google.protobuf;
+
+message M {
+  string f1 = 1;
+  int32 f2 = 2;
+}

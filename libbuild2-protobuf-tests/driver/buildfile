@@ -1,0 +1,5 @@
+exe{driver}: {hxx cxx}{**}
+
+exe{driver}: {hxx cxx}{test}: proto{test}
+
+cxx.poptions =+ "-I$out_root" "-I$src_root"

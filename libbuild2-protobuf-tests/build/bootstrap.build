@@ -1,0 +1,6 @@
+project = libbuild2-protobuf-tests
+
+using version
+using config
+using test
+using dist
