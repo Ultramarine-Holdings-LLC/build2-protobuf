@@ -239,11 +239,11 @@ sources_full = \
   cxx{google/protobuf/wire_format}                               \
   cxx{google/protobuf/wrappers.pb.cc}
 
-cxx.poptions += "-I$src_base" "-DHAVE_ZLIB"
+cxx.poptions =+ "-I$src_base/override" "-I$src_base" "-DHAVE_ZLIB"
 
-lib{protobuf}: $header $sources_lite $sources_full $libs
+lib{protobuf}: override/google/protobuf/hxx{port_def.inc} $header $sources_lite $sources_full $libs
 {
-    cxx.export.poptions += "-I$src_base" "-DHAVE_ZLIB"
+    cxx.export.poptions =+ "-I$src_base/override" "-I$src_base" "-DHAVE_ZLIB"
 }
 
 {hbmis objs}{*}: cxx.poptions += "-DLIBPROTOBUF_EXPORTS" "-DPROTOBUF_USE_DLLS"

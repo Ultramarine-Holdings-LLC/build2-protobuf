@@ -156,11 +156,11 @@ sources_protoc = \
     cxx{google/protobuf/compiler/zip_writer}                       \
     hxx{google/protobuf/compiler/zip_writer}
 
-cxx.poptions += "-I$src_base"
+cxx.poptions =+ "-I$src_base/override" "-I$src_base"
 
-lib{protoc}: $sources_protoc $libs
+lib{protoc}: override/google/protobuf/hxx{port_def.inc} $sources_protoc $libs
 {
-    cxx.export.poptions += "-I$src_base"
+    cxx.export.poptions =+ "-I$src_base/override" "-I$src_base"
 }
 
 {hbmis objs}{*}: cxx.poptions += "-DLIBPROTOC_EXPORTS" "-DPROTOBUF_USE_DLLS"

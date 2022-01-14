@@ -159,11 +159,11 @@ sources_lite = \
   hxx{google/protobuf/stubs/time}                                \
   cxx{google/protobuf/wire_format_lite}
 
-cxx.poptions += "-I$src_base"
+cxx.poptions =+ "-I$src_base/override" "-I$src_base"
 
-lib{protobuf_lite}: $headers $sources_lite
+lib{protobuf_lite}: override/google/protobuf/hxx{port_def.inc} $headers $sources_lite
 {
-    cxx.export.poptions += "-I$src_base"
+    cxx.export.poptions =+ "-I$src_base/override" "-I$src_base"
 }
 
 {hbmis objs}{*}: cxx.poptions += "-DLIBPROTOBUF_EXPORTS" "-DPROTOBUF_USE_DLLS"
