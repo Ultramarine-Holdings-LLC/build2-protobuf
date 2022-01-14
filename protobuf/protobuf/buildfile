@@ -1,3 +1,5 @@
+import libs = libz%lib{z}
+
 headers = \
   hxx{google/protobuf/any}                                          \
   hxx{google/protobuf/any.pb.h}                                       \
@@ -237,11 +239,13 @@ sources_full = \
   cxx{google/protobuf/wire_format}                               \
   cxx{google/protobuf/wrappers.pb.cc}
 
-cxx.poptions += "-I$src_base"
+cxx.poptions += "-I$src_base" "-DHAVE_ZLIB"
 
-lib{protobuf}: $header $sources_lite $sources_full
+if (
+
+lib{protobuf}: $header $sources_lite $sources_full $libs
 {
-    cxx.export.poptions += "-I$src_base"
+    cxx.export.poptions += "-I$src_base" "-DHAVE_ZLIB"
 }
 
 {hbmis objs}{*}: cxx.poptions += "-DLIBPROTOBUF_EXPORTS" "-DPROTOBUF_USE_DLLS"
