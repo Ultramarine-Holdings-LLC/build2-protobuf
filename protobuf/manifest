@@ -7,4 +7,4 @@ url: https://github.com/protocolbuffers/protobuf
 depends: * build2 >= 0.14.0
 depends: * bpkg >= 0.14.0
 
-depends: libz ^1.2.11
+depends: libz ^1.2.1100
