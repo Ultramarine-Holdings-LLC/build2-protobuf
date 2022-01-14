@@ -1,9 +1,0 @@
-: 1
-name: libbuild2-protobuf
-version: 3.19.1
-summary: build2 compiler module for protobuf/protoc compiler
-license: BSD-3-Clause
-url: https://github.com/protocolbuffers/protobuf
-depends: * build2 >= 0.14.0
-depends: * bpkg >= 0.14.0
-tests: * libbuild2-protobuf-tests == $

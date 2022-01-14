@@ -6,7 +6,3 @@ location: protobuf/
 location: libprotoc/
 :
 location: protoc/
-:
-location: libbuild2-protobuf/
-:
-location: libbuild2-protobuf-tests/
