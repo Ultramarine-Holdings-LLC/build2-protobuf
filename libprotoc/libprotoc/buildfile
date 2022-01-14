@@ -162,3 +162,6 @@ lib{protoc}: $sources_protoc $libs
 {
     cxx.export.poptions += "-I$src_base"
 }
+
+{hbmis objs}{*}: cxx.poptions += "-DLIBPROTOC_EXPORTS" "-DPROTOBUF_USE_DLLS"
+libs{protoc}: cxx.export.poptions += "-DPROTOBUF_USE_DLLS"

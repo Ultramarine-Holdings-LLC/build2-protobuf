@@ -243,3 +243,6 @@ lib{protobuf}: $header $sources_lite $sources_full
 {
     cxx.export.poptions += "-I$src_base"
 }
+
+{hbmis objs}{*}: cxx.poptions += "-DLIBPROTOBUF_EXPORTS" "-DPROTOBUF_USE_DLLS"
+libs{protobuf}: cxx.export.poptions += "-DPROTOBUF_USE_DLLS"
