@@ -241,7 +241,7 @@ sources_full = \
 
 cxx.poptions =+ "-I$src_base/override" "-I$src_base" "-DHAVE_ZLIB"
 
-lib{protobuf}: override/google/protobuf/hxx{port_def.inc} $header $sources_lite $sources_full $libs
+lib{protobuf}: override/google/protobuf/hxx{port_def.inc} $headers $sources_lite $sources_full $libs
 {
     cxx.export.poptions =+ "-I$src_base/override" "-I$src_base" "-DHAVE_ZLIB"
 }
